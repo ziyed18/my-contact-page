@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+       font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      background: #121212;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #eee;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: lightblue;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 0 0 5px rgba(102, 126, 234, 0.7);
+    }
+
+    form {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px 3px rgba(255, 255, 255, 0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      background: #292929;
+      border: none;
+      border-radius: 12px;
+      padding: 15px;
+      font-size: 16px;
+      color: #eee;
+      resize: vertical;
+      transition: box-shadow 0.3s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #777;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      box-shadow: 0 0 8px 2px #667eea;
+      background: #3a3a3a;
+    }
+
+    button {
+      background: #667eea;
+      border: none;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      background: #5a67d8;
+      box-shadow: 0 8px 20px rgba(90, 103, 216, 0.6);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      form {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <form action="https://formspree.io/f/mvgrdqqw" method="POST" novalidate>
+      <label for="name">Your name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        autocomplete="name"
+        required
+      />
+
+      <label for="email">Your email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@example.com"
+        autocomplete="email"
+        required
+      />
+
+      <label for="message">Your message:</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="Write your message here..."
+        rows="6"
+        required
+      ></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+</body>
+</html>
